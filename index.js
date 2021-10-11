@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: false}))
 
 const registrationRoute = require('./routes/registrationRoute')
 
-app.use('/sigma',registrationRoute)
+app.use('/',registrationRoute)
 
 const PORT = process.env.PORT || 3030
 
