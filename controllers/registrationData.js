@@ -1,5 +1,9 @@
 const Registration = require('../model/Registration')
 
+const testRoute = (async(req,res) => {
+    return res.send(JSON.stringify({version: 0.1, prerelease: true, paths: ["post", "show"]}))
+})
+
 const postRegistration = (async(req,res) => {
     try
     {
@@ -58,4 +62,4 @@ const showRegistration = (async(req, res) => {
     }
 })
 
-module.exports = {postRegistration, showRegistration}
+module.exports = {postRegistration, showRegistration, testRoute}
